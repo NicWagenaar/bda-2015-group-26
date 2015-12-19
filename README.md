@@ -10,15 +10,15 @@ This repository holds the source code for the semester project of group 26 for t
 - A Unix based operating system to run the shell scripts
 
 ### Getting started
-- Start by setting up a Postgres database and install the PostGIS extension.
-Then set the database variables in `imports/zipcode_importer.rb`, `import_green_data.sh` and `import_uber_data.sh` to be able to connect to your database.
 - Clone, fork or download this repository.
+- Set up a Postgres database and install the PostGIS extension.
+Then set the database variables in `imports/zipcode_importer.rb`, `import_green_data.sh` and `import_uber_data.sh` to be able to connect to your database.
 - Create the database schema by running `database_setup/create_tables.sql`.
 - Download the datasets by running `imports/download_green_data.sh` and `imports/download_uber_data.sh`.
 This creates `imports/green_data` and `imports/uber_data` directories.
 - Import the Green Taxi and Uber data to your database by running `imports/import_green_data.sh` and `imports/import_uber_data`.
 - Import the zip code polygons by running `imports/zipcode_importer.rb`.
-- To complete the setup, run `database_setup/combine_rides.sql` to create the aggregated rides table that holds both Green and Uber rides in a normalised format.
+- To complete the setup, run `database_setup/combine_rides.sql` to populate the aggregated rides table that holds both Green and Uber rides in a normalised format.
 
 ### Analysis
 - Run `analysis/create_aggregate_tables.sql` to aggregate and group ride counts by a number of variables. Refer to the file for more details.
